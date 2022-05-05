@@ -1,8 +1,9 @@
-const keys = [ 
+const keys = [ //https://www.toptal.com/developers/keycode
+
+// ____________ FIRST ROW _______________ 0 ... 13
 
 {
     "key": "§",
-    "symbol": "§",
     "keyCode": 192,
     "which": 192,
     "code": "IntlBackslash",
@@ -16,7 +17,6 @@ const keys = [
 
 {
     "key": "1",
-    "symbol": "1",
     "keyCode": 49,
     "which": 49,
     "code": "Digit1",
@@ -27,7 +27,6 @@ const keys = [
 
 {
     "key": "2",
-    "symbol": "2",
     "keyCode": 50,
     "which": 50,
     "code": "Digit2",
@@ -38,7 +37,6 @@ const keys = [
 
 {
     "key": "3",
-    "symbol": "3",
     "keyCode": 51,
     "which": 51,
     "code": "Digit3",
@@ -49,7 +47,6 @@ const keys = [
 
 {
     "key": "4",
-    "symbol": "4",
     "keyCode": 52,
     "which": 52,
     "code": "Digit4",
@@ -60,7 +57,6 @@ const keys = [
 
 {
     "key": "5",
-    "symbol": "5",
     "keyCode": 53,
     "which": 53,
     "code": "Digit5",
@@ -71,7 +67,6 @@ const keys = [
 
 {
     "key": "6",
-    "symbol": "6",
     "keyCode": 54,
     "which": 54,
     "code": "Digit6",
@@ -82,7 +77,6 @@ const keys = [
 
 {
     "key": "7",
-    "symbol": "7",
     "keyCode": 55,
     "which": 55,
     "code": "Digit7",
@@ -93,7 +87,6 @@ const keys = [
 
 {
     "key": "8",
-    "symbol": "8",
     "keyCode": 56,
     "which": 56,
     "code": "Digit8",
@@ -104,7 +97,6 @@ const keys = [
 
 {
     "key": "9",
-    "symbol": "9",
     "keyCode": 57,
     "which": 57,
     "code": "Digit9",
@@ -115,7 +107,6 @@ const keys = [
 
 {
     "key": "0",
-    "symbol": "0",
     "keyCode": 48,
     "which": 48,
     "code": "Digit0",
@@ -126,17 +117,15 @@ const keys = [
 
 {
     "key": "-",
-    "symbol": "-",
     "keyCode": 109,
     "which": 109,
     "code": "NumpadSubtract",
-    "location": 0,
+    "location": 3,
     "description": "subtract"
 },
 
 {
     "key": "=",
-    "symbol": "=",
     "keyCode": 61,
     "which": 61,
     "code": "Equal",
@@ -145,7 +134,7 @@ const keys = [
 },
 
 {
-    "key": "⌫",
+    "key": "Backspace",
     "keyCode": 8,
     "which": 8,
     "code": "Backspace",
@@ -154,123 +143,114 @@ const keys = [
     "unicode": "⌫"
 },
 
+// ____________ SECOND ROW _______________  14 ... 26
+
 {
     "key": "Tab",
     "keyCode": 9,
     "which": 9,
     "code": "Tab",
-    "location": 1,
+    "location": 0,
     "description": "tab",
     "unicode": "↹"
 },
 
 {
     "key": "q",
-    "symbol": "q",
     "keyCode": 81,
     "which": 81,
     "code": "KeyQ",
-    "location": 1,
+    "location": 0,
     "description": "q"
 }, 
 
 {
     "key": "w",
-    "symbol": "w",
     "keyCode": 87,
     "which": 87,
     "code": "KeyW",
-    "location": 1,
+    "location": 0,
     "description": "w"
 },
 
 {
     "key": "e",
-    "symbol": "e",
     "keyCode": 69,
     "which": 69,
     "code": "KeyE",
-    "location": 1,
+    "location": 0,
     "description": "e"
 },
 
 {
     "key": "r",
-    "symbol": "r",
     "keyCode": 82,
     "which": 82,
     "code": "KeyR",
-    "location": 1,
+    "location": 0,
     "description": "r"
 }, 
 
 {
     "key": "t",
-    "symbol": "t",
     "keyCode": 84,
     "which": 84,
     "code": "KeyT",
-    "location": 1,
+    "location": 0,
     "description": "t"
 },
 
 {
     "key": "y",
-    "symbol": "y",
     "keyCode": 89,
     "which": 89,
     "code": "KeyY",
-    "location": 1,
+    "location": 0,
     "description": "y"
 },
 
 {
     "key": "u",
-    "symbol": "u",
     "keyCode": 85,
     "which": 85,
     "code": "KeyU",
-    "location": 1,
+    "location": 0,
     "description": "u"
 }, 
 
 {
     "key": "i",
-    "symbol": "i",
     "keyCode": 73,
     "which": 73,
     "code": "KeyI",
-    "location": 1,
+    "location": 0,
     "description": "i"
 },
 
 {
     "key": "o",
-    "symbol": "o",
     "keyCode": 79,
     "which": 79,
     "code": "KeyO",
-    "location": 1,
+    "location": 0,
     "description": "o"
 },
 
 {
     "key": "p",
-    "symbol": "p",
     "keyCode": 80,
     "which": 80,
     "code": "KeyP",
-    "location": 1,
+    "location": 0,
     "description": "p"
 },
 
 {
     "key": "[",
-    "symbol": "[",
     "keyCode": 160,
     "which": 160,
     "code": "BracketLeft",
-    "location": 1,
+    "location": 0,
     "altKey": false,
     "ctrlKey": false,
     "metaKey": false,
@@ -280,101 +260,94 @@ const keys = [
 
 {
     "key": "]",
-    "symbol": "]",
     "keyCode": 221,
     "which": 221,
     "code": "BracketRight",
-    "location": 1,
+    "location": 0,
     "description": "close bracket / å"
 },
+
+// ____________ THIRD ROW _______________ 27 ... 40
 
 {
     "key": "CapsLock",
     "keyCode": 20,
     "which": 20,
     "code": "CapsLock",
-    "location": 2,
+    "location": 0,
     "description": "caps lock",
     "unicode": "⇪"
 },
 
 {
     "key": "a",
-    "symbol": "a",
     "keyCode": 65,
     "which": 65,
     "code": "KeyA",
-    "location": 2,
+    "location": 0,
     "description": "a"
 },
 
 {
     "key": "s",
-    "symbol": "s",
     "keyCode": 83,
     "which": 83,
     "code": "KeyS",
-    "location": 2,
+    "location": 0,
     "description": "s"
 },
 
 {
     "key": "d",
-    "symbol": "d",
     "keyCode": 68,
     "which": 68,
     "code": "KeyD",
-    "location": 2,
+    "location": 0,
     "description": "d"
 },
 
 {
     "key": "f",
-    "symbol": "f",
     "keyCode": 70,
     "which": 70,
     "code": "KeyF",
-    "location": 2,
+    "location": 0,
     "description": "f"
 },
 
 {
     "key": "g",
-    "symbol": "g",
     "keyCode": 71,
     "which": 71,
     "code": "KeyG",
-    "location": 2,
+    "location": 0,
     "description": "g"
 },
 
 {
     "key": "h",
-    "symbol": "h",
     "keyCode": 72,
     "which": 72,
     "code": "KeyH",
-    "location": 2,
+    "location": 0,
     "description": "h"
 }, 
 
 {
     "key": "j",
-    "symbol": "j",
     "keyCode": 74,
     "which": 74,
     "code": "KeyJ",
-    "location": 2,
+    "location": 0,
     "description": "j"
 },
 
 {
     "key": "k",
-    "symbol": "k",
     "keyCode": 75,
     "which": 75,
     "code": "KeyK",
-    "location": 2,
+    "location": 0,
     "altKey": true,
     "ctrlKey": false,
     "metaKey": true,
@@ -384,11 +357,10 @@ const keys = [
 
 {
     "key": "l",
-    "symbol": "l",
     "keyCode": 76,
     "which": 76,
     "code": "KeyL",
-    "location": 2,
+    "location": 0,
     "altKey": true,
     "ctrlKey": false,
     "metaKey": true,
@@ -398,137 +370,127 @@ const keys = [
 
 {
     "key": ";",
-    "symbol": ";",
     "keyCode": 59,
     "which": 59,
     "code": "Semicolon",
-    "location": 2,
+    "location": 0,
     "description": "semicolon (firefox), equals"
 },
 
 {
     "key": "'",
-    "symbol": "'",
     "keyCode": 222,
     "which": 222,
     "code": "Quote",
-    "location": 2,
+    "location": 0,
     "description": "single quote / ø / ä"
 },
 
 {
     "key": "\\",
-    "symbol": "\\",
     "keyCode": 220,
     "which": 220,
     "code": "Backslash",
-    "location": 2,
+    "location": 0,
     "description": "back slash"
 },
 
 {
-    "key": "Enter↵",
+    "key": "Enter",
     "keyCode": 13,
     "which": 13,
     "code": "Enter",
-    "location": 2,
+    "location": 0,
     "description": "Enter / Return",
     "unicode": "↵"
 },
+
+// ____________ FORTH ROW _______________ 41 ... 55
 
 {
     "key": "Shift",
     "keyCode": 16,
     "which": 16,
     "code": "ShiftLeft",
-    "location": 3,
+    "location": 1,
     "description": "shift",
     "unicode": "⇧"
 },
 
 {
     "key": "`",
-    "symbol": "`",
     "keyCode": 192,
     "which": 192,
     "code": "Backquote",
-    "location": 3,
+    "location": 0,
     "description": "Backtick / grave accent / ñ / æ / ö"
 },
 
 {
     "key": "z",
-    "symbol": "z",
     "keyCode": 90,
     "which": 90,
     "code": "KeyZ",
-    "location": 3,
+    "location": 0,
     "description": "z"
 },
 
 {
     "key": "x",
-    "symbol": "x",
     "keyCode": 88,
     "which": 88,
     "code": "KeyX",
-    "location": 3,
+    "location": 0,
     "description": "x"
 },
 
 {
     "key": "c",
-    "symbol": "c",
     "keyCode": 67,
     "which": 67,
     "code": "KeyC",
-    "location": 3,
+    "location": 0,
     "description": "c"
 },
 
 {
     "key": "v",
-    "symbol": "v",
     "keyCode": 86,
     "which": 86,
     "code": "KeyV",
-    "location": 3,
+    "location": 0,
     "description": "v"
 },
 
 {
     "key": "b",
-    "symbol": "b",
     "keyCode": 66,
     "which": 66,
     "code": "KeyB",
-    "location": 3,
+    "location": 0,
     "description": "b"
 },
 
 {
     "key": "n",
-    "symbol": "n",
     "keyCode": 78,
     "which": 78,
     "code": "KeyN",
-    "location": 3,
+    "location": 0,
     "description": "n"
 },
 
 {
     "key": "m",
-    "symbol": "m",
     "keyCode": 77,
     "which": 77,
     "code": "KeyM",
-    "location": 3,
+    "location": 0,
     "description": "m"
 },
 
 {
     "key": ",",
-    "symbol": ",",
     "keyCode": 108,
     "which": 108,
     "code": "NumpadDecimal",
@@ -542,30 +504,28 @@ const keys = [
 
 {
     "key": ".",
-    "symbol": ".",
     "keyCode": 190,
     "which": 190,
     "code": "Period",
-    "location": 3,
+    "location": 0,
     "description": "period"
 },
 
 {
     "key": "/",
-    "symbol": "/",
     "keyCode": 191,
     "which": 191,
     "code": "Slash",
-    "location": 3,
+    "location": 0,
     "description": "forward slash / ç"
 },
 
 {
-    "key": '&#5123;',
+    "key": "ArrowUp",
     "keyCode": 38,
     "which": 38,
     "code": "ArrowUp",
-    "location": 3,
+    "location": 0,
     "altKey": false,
     "ctrlKey": false,
     "metaKey": false,
@@ -577,18 +537,20 @@ const keys = [
     "key": "Shift",
     "keyCode": 16,
     "which": 16,
-    "code": "ShiftRight",
-    "location": 3,
+    "code": "ShiftLeft",
+    "location": 1,
     "description": "shift",
     "unicode": "⇧"
 },
 
+// ____________ FIFTH ROW _______________ 56 ... 64
+
 {
-    "key": "^",
+    "key": "Control",
     "keyCode": 17,
     "which": 17,
     "code": "ControlLeft",
-    "location": 4,
+    "location": 1,
     "altKey": true,
     "ctrlKey": false,
     "metaKey": true,
@@ -598,11 +560,11 @@ const keys = [
 },
 
 {
-    "key": "⌥",
+    "key": "Alt",
     "keyCode": 18,
     "which": 18,
     "code": "AltLeft",
-    "location": 4,
+    "location": 1,
     "altKey": true,
     "ctrlKey": false,
     "metaKey": true,
@@ -612,11 +574,11 @@ const keys = [
 },
 
 {
-    "key": "⌘",
+    "key": "Meta",
     "keyCode": 91,
     "which": 91,
     "code": "MetaLeft",
-    "location": 4,
+    "location": 1,
     "altKey": false,
     "ctrlKey": false,
     "metaKey": true,
@@ -630,7 +592,7 @@ const keys = [
     "keyCode": 32,
     "which": 32,
     "code": "Space",
-    "location": 4,
+    "location": 0,
     "altKey": false,
     "ctrlKey": false,
     "metaKey": false,
@@ -639,11 +601,11 @@ const keys = [
 },
 
 {
-    "key": "⌘",
+    "key": "Meta",
     "keyCode": 91,
     "which": 91,
-    "code": "MetaRight",
-    "location": 4,
+    "code": "MetaLeft",
+    "location": 1,
     "altKey": false,
     "ctrlKey": false,
     "metaKey": true,
@@ -653,11 +615,11 @@ const keys = [
 },
 
 {
-    "key": "⌥",
+    "key": "Alt",
     "keyCode": 18,
     "which": 18,
-    "code": "AltRight",
-    "location": 4,
+    "code": "AltLeft",
+    "location": 1,
     "altKey": true,
     "ctrlKey": false,
     "metaKey": true,
@@ -667,11 +629,11 @@ const keys = [
 },
 
 {
-    "key": '&#5130;',
+    "key": "ArrowLeft",
     "keyCode": 37,
     "which": 37,
     "code": "ArrowLeft",
-    "location": 4,
+    "location": 0,
     "altKey": false,
     "ctrlKey": false,
     "metaKey": false,
@@ -680,11 +642,11 @@ const keys = [
 },
 
 {
-    "key": '&#5121;',
+    "key": "ArrowDown",
     "keyCode": 40,
     "which": 40,
     "code": "ArrowDown",
-    "location": 4,
+    "location": 0,
     "altKey": false,
     "ctrlKey": false,
     "metaKey": false,
@@ -693,11 +655,11 @@ const keys = [
 },
 
 {
-    "key": '&#5125;',
+    "key": "ArrowRight",
     "keyCode": 39,
     "which": 39,
     "code": "ArrowRight",
-    "location": 4,
+    "location": 0,
     "altKey": false,
     "ctrlKey": false,
     "metaKey": false,
@@ -706,164 +668,3 @@ const keys = [
 }
 
 ];
-
-let div = document.createElement('div');
-div.className = "wrapper";
-document.body.append(div);
-
-const WRAPPER = document.querySelector('.wrapper');
-WRAPPER.insertAdjacentHTML('afterbegin', '<div class="last_lane">This keyboard made in iOS. Press Ctr+Space to change language</div>');
-WRAPPER.insertAdjacentHTML('afterbegin', '<div class="keyboard_container"></div>');
-WRAPPER.insertAdjacentHTML('afterbegin', '<textarea disabled class="textarea_body" id="textarea" rows="5" cols="50" placeholder="Start typing..."></textarea>');
-WRAPPER.insertAdjacentHTML('afterbegin', '<div class="greeting">Virtual keyboard (for RSS)</div>');
-
-const TEXTAREA = document.getElementById('textarea');
-
-const KEYBOARD_CONTAINER = document.querySelector('.keyboard_container');
-KEYBOARD_CONTAINER.insertAdjacentHTML('afterbegin', '<div class="keyboard_row"></div>');
-KEYBOARD_CONTAINER.insertAdjacentHTML('afterbegin', '<div class="keyboard_row"></div>');
-KEYBOARD_CONTAINER.insertAdjacentHTML('afterbegin', '<div class="keyboard_row"></div>');
-KEYBOARD_CONTAINER.insertAdjacentHTML('afterbegin', '<div class="keyboard_row"></div>');
-KEYBOARD_CONTAINER.insertAdjacentHTML('afterbegin', '<div class="keyboard_row"></div>');
-const KEYBOARD_ROW_1 = document.querySelector('.keyboard_row');
-const KEYBOARD_ROW_2 = KEYBOARD_ROW_1.nextSibling;
-const KEYBOARD_ROW_3 = KEYBOARD_ROW_2.nextSibling;
-const KEYBOARD_ROW_4 = KEYBOARD_ROW_3.nextSibling;
-const KEYBOARD_ROW_5 = KEYBOARD_ROW_4.nextSibling;
-
-function buttonCreator(buttonSymbol, buttonID, buttonRow) {
-    const BUTTON_NAME = document.createElement('button');
-    BUTTON_NAME.className = "keyboard_key";
-    BUTTON_NAME.id = buttonID;
-    BUTTON_NAME.innerHTML = `${buttonSymbol}`;
-    if (buttonRow == 0) {
-        KEYBOARD_ROW_1.append(BUTTON_NAME);
-    } else if (buttonRow == 1) {
-        KEYBOARD_ROW_2.append(BUTTON_NAME);
-    } else if (buttonRow == 2) {
-        KEYBOARD_ROW_3.append(BUTTON_NAME);
-    } else if (buttonRow == 3) {
-        KEYBOARD_ROW_4.append(BUTTON_NAME);
-     } else KEYBOARD_ROW_5.append(BUTTON_NAME);
-}
-
-for (let i = 0; i < 64; i++) {
-    if (keys[i].hasOwnProperty('symbol')) {
-        buttonID = keys[i].symbol;
-    } else buttonID = keys[i].code;
-    buttonCreator(keys[i].key, buttonID, keys[i].location);
-}
-
-document.getElementById('Backspace').className = "strong_key backspace_btn";
-document.getElementById('Tab').className = "strong_key tab_btn";
-document.getElementById('CapsLock').className = "strong_key caps_lock_btn";
-document.getElementById('Enter').className = "strong_key enter_btn";
-document.getElementById('ShiftLeft').className = "strong_key shift_btn";
-document.getElementById('ShiftRight').className = "strong_key shift_btn";
-
-document.getElementById('ControlLeft').className = "strong_key control_btn";
-document.getElementById('AltLeft').className = "strong_key option_btn";
-document.getElementById('AltRight').className = "strong_key option_btn";
-document.getElementById('MetaLeft').className = "strong_key command_btn";
-document.getElementById('MetaRight').className = "strong_key command_btn";
-
-document.getElementById('Space').className = "strong_key space_btn";
-
-document.getElementById('ArrowLeft').className = "strong_key left_arrow_btn";
-document.getElementById('ArrowDown').className = "strong_key down_arrow_btn";
-document.getElementById('ArrowRight').className = "strong_key right_arrow_btn";
-document.getElementById('ArrowUp').className = "strong_key up_arrow_btn";
-
-document.addEventListener('keydown', event => {
-    let someVar = document.getElementById(`${event.key}`);
-    someVar.focus();
-    someVar.style="background-color: darkcyan;";       /// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!_______________________@!!!*&^%$#
-    if (someVar.className == 'keyboard_key') {
-        TEXTAREA.value += `${someVar.id}`;
-    } else if (someVar.id == 'Tab') {
-        TEXTAREA.value += `\t`;
-    } else if (someVar.id == 'Enter') {
-        TEXTAREA.value += `\n`;
-    } else if (someVar.id == 'ArrowLeft') {
-        TEXTAREA.value += `←`;
-    } else if (someVar.id == 'ArrowDown') {
-        TEXTAREA.value += `↓`;
-    } else if (someVar.id == 'ArrowRight') {
-        TEXTAREA.value += `→`;
-    } else if (someVar.id == 'ArrowUp') {
-        TEXTAREA.value += `↑`;
-    } else if (someVar.id == 'Space') {              /// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!_______________________@!!!*&^%$#
-        TEXTAREA.value += '_';
-    } else if (someVar.id == 'Backspace') {
-        let currentText = TEXTAREA.value;
-        currentText = currentText.slice(0,-1);
-        TEXTAREA.value = currentText;
-    }
-})
-
-document.addEventListener('keyup', event => {
-    document.getElementById(`${event.key}`).style="";     /// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!_______________________@!!!*&^%$#
-})
-
-document.querySelectorAll('.keyboard_key').forEach(item => {
-    item.addEventListener('click', event => {
-        TEXTAREA.value += `${item.id}`;
-    })
-})
-
-document.getElementById('Backspace').addEventListener('click', event => {
-    let currentText = TEXTAREA.value;
-    currentText = currentText.slice(0,-1);
-    TEXTAREA.value = currentText;
-})
-
-document.getElementById('Tab').addEventListener('click', event => {
-    TEXTAREA.value += `\t`;
-})
-
-document.getElementById('Enter').addEventListener('click', event => {
-    TEXTAREA.value += `\n`;
-})
-
-document.getElementById('ArrowLeft').addEventListener('click', event => {
-    TEXTAREA.value += `←`;
-})
-
-document.getElementById('ArrowDown').addEventListener('click', event => {
-    TEXTAREA.value += `↓`;
-})
-
-document.getElementById('ArrowRight').addEventListener('click', event => {
-    TEXTAREA.value += `→`;
-})
-
-document.getElementById('ArrowUp').addEventListener('click', event => {
-    TEXTAREA.value += `↑`;
-})
-
-document.getElementById('Space').addEventListener('click', event => {
-    TEXTAREA.value += ` `;
-})
-
-
-
-/*
-document.getElementById('CapsLock').addEventListener('keydown', event => {
-    document.querySelectorAll('.keyboard_key').classList.add('capsStyle');
-})
-document.getElementById('CapsLock').addEventListener('keyup', event => {
-    document.querySelectorAll('.keyboard_key').classList.remove('capsStyle');
-})
-*/
-
-//.style="background-color: darkcyan;";
-//.style="";
-/*
-
-document.addEventListener('keydown', function(event) {
-    if (event.code == 'KeyZ' && (event.ctrlKey || event.metaKey)) {
-      alert('Отменить!')
-    }
-  });
-
-*/
