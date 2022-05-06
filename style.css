@@ -1,0 +1,122 @@
+.wrapper {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.body {
+    margin: 0;
+}
+
+.greeting {
+    font-family: Arial;
+    font-size: 26px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    padding: 10px;
+}
+
+.last_lane {
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+}
+
+.textarea_body {
+    width: 98%;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    font-family: Arial;
+    font-size: 20px;
+    letter-spacing: 1px;
+    overflow:auto;
+}
+
+.keyboard_container {
+    width: 100%;
+    margin: 20px;
+    line-height: 46px;
+    background-color: rgb(127, 151, 182);
+    border: 3px solid black;
+    border-radius: 9px;
+}
+
+.keyboard_row {
+    display:flex;
+    justify-content: space-around;
+}
+
+.keyboard_key {
+    margin: 4px;
+    width: 100%;
+    height: 46px;
+    font-family: Arial;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    color:aliceblue;
+    background-color: rgb(51, 65, 83);
+    border: 0.5px solid black;
+    border-radius: 4px;
+    text-align: center;
+    text-transform: lowercase;
+}
+
+.keyboard_key:hover {
+    background-color:rgb(115, 179, 202);
+    border: 0.5px solid rgb(78, 100, 117);
+    cursor: pointer;
+}
+
+.keyboard_key:active {
+    background-color:darkcyan;
+}
+
+.strong_key {
+    margin: 4px;
+    width: 100px;
+    height: 46px;
+    font-family: Arial;
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+    letter-spacing: 0.04em;
+    color:aliceblue;
+    background-color: rgb(18, 33, 51);
+    border: 0.5px solid black;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.strong_key:hover {
+    background-color:rgb(90, 156, 180);
+    border: 0.5px solid rgb(78, 100, 117);
+    cursor: pointer;
+}
+
+.strong_key:active {
+    background-color:darkcyan;
+}
+
+.key_pressed {
+    background-color:darkcyan;
+}
+
+.capsStyle {
+    text-transform: uppercase;
+}
+
+.space_btn {
+    width: 100%;
+}
+
+.arrow_up_btn {
+    width: 85%;
+}
+
+.tab_btn {
+    width: 100%;
+}
+
+.backspace_btn {
+    width: 160%;
+}
