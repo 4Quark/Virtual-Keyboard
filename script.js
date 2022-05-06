@@ -732,7 +732,7 @@ const KEYBOARD_ROW_4 = KEYBOARD_ROW_3.nextSibling;
 const KEYBOARD_ROW_5 = KEYBOARD_ROW_4.nextSibling;
 
 function buttonCreator(buttonSymbol, buttonID, buttonRow) {
-    const BUTTON_NAME = document.createElement('button');
+    const BUTTON_NAME = document.createElement('div');
     BUTTON_NAME.className = "keyboard_key";
     BUTTON_NAME.id = buttonID;
     BUTTON_NAME.innerHTML = `${buttonSymbol}`;
@@ -756,7 +756,8 @@ for (let i = 0; i < 64; i++) {
 
 document.getElementById('Backspace').className = "strong_key backspace_btn";
 document.getElementById('Tab').className = "strong_key tab_btn";
-document.getElementById('CapsLock').className = "strong_key caps_lock_btn";
+const CAPS_BUTTON = document.getElementById('CapsLock');
+CAPS_BUTTON.className = "strong_key caps_lock_btn";
 document.getElementById('Enter').className = "strong_key enter_btn";
 document.getElementById('ShiftLeft').className = "strong_key shift_btn";
 document.getElementById('ShiftRight').className = "strong_key shift_btn";
@@ -767,47 +768,119 @@ document.getElementById('AltRight').className = "strong_key option_btn";
 document.getElementById('MetaLeft').className = "strong_key command_btn";
 document.getElementById('MetaRight').className = "strong_key command_btn";
 
-document.getElementById('Space').className = "strong_key space_btn";
+const SPACE_BAR = document.getElementById('Space');
+SPACE_BAR.className = "strong_key space_btn";
 
-document.getElementById('ArrowLeft').className = "strong_key left_arrow_btn";
-document.getElementById('ArrowDown').className = "strong_key down_arrow_btn";
-document.getElementById('ArrowRight').className = "strong_key right_arrow_btn";
-document.getElementById('ArrowUp').className = "strong_key up_arrow_btn";
+document.getElementById('ArrowLeft').className = "strong_key arrow_btn";
+document.getElementById('ArrowDown').className = "strong_key arrow_btn";
+document.getElementById('ArrowRight').className = "strong_key arrow_btn";
+document.getElementById('ArrowUp').className = "strong_key arrow_up_btn";
+
 
 document.addEventListener('keydown', event => {
-    let someVar = document.getElementById(`${event.key}`);
-    someVar.focus();
-    someVar.style="background-color: darkcyan;";       /// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!_______________________@!!!*&^%$#
-    if (someVar.className == 'keyboard_key') {
-        TEXTAREA.value += `${someVar.id}`;
-    } else if (someVar.id == 'Tab') {
+    event.preventDefault();
+    if (event.code == 'Space') {              
+        TEXTAREA.value += ` `;
+        SPACE_BAR.classList.add('key_pressed');
+    } else if (event.code == 'ShiftLeft') {              
+        document.getElementById('ShiftLeft').classList.add('key_pressed');
+    } else if (event.code == 'ControlLeft') {              
+        document.getElementById('ControlLeft').classList.add('key_pressed');
+    } else if (event.code == 'AltLeft') {              
+        document.getElementById('AltLeft').classList.add('key_pressed');
+    } else if (event.code == 'MetaLeft') {              
+        document.getElementById('MetaLeft').classList.add('key_pressed');
+    } else if (event.code == 'ShiftRight') {              
+        document.getElementById('ShiftRight').classList.add('key_pressed');
+    } else if (event.code == 'ControlRight') {              
+        document.getElementById('ControlRight').classList.add('key_pressed');
+    } else if (event.code == 'AltRight') {              
+        document.getElementById('AltRight').classList.add('key_pressed');
+    } else if (event.code == 'MetaRight') {              
+        document.getElementById('MetaRight').classList.add('key_pressed');
+    } else if (event.code == 'Tab') {
         TEXTAREA.value += `\t`;
-    } else if (someVar.id == 'Enter') {
+        document.getElementById('Tab').classList.add('key_pressed');
+    } else if (event.code == 'Enter') {
         TEXTAREA.value += `\n`;
-    } else if (someVar.id == 'ArrowLeft') {
+        document.getElementById('Enter').classList.add('key_pressed');
+    } else if (event.code == 'ArrowLeft') {
         TEXTAREA.value += `←`;
-    } else if (someVar.id == 'ArrowDown') {
+        document.getElementById('ArrowLeft').classList.add('key_pressed');
+    } else if (event.code == 'ArrowDown') {
         TEXTAREA.value += `↓`;
-    } else if (someVar.id == 'ArrowRight') {
+        document.getElementById('ArrowDown').classList.add('key_pressed');
+    } else if (event.code == 'ArrowRight') {
         TEXTAREA.value += `→`;
-    } else if (someVar.id == 'ArrowUp') {
+        document.getElementById('ArrowRight').classList.add('key_pressed');
+    } else if (event.code == 'ArrowUp') {
         TEXTAREA.value += `↑`;
-    } else if (someVar.id == 'Space') {              /// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!_______________________@!!!*&^%$#
-        TEXTAREA.value += '_';
-    } else if (someVar.id == 'Backspace') {
+        document.getElementById('ArrowUp').classList.add('key_pressed');
+    } else if (event.code == 'Backspace') {
         let currentText = TEXTAREA.value;
         currentText = currentText.slice(0,-1);
         TEXTAREA.value = currentText;
-    }
+        document.getElementById('Backspace').classList.add('key_pressed');
+    } else if (event.code == 'CapsLock') {             
+        document.querySelectorAll('.keyboard_key').forEach(item => {item.classList.add('capsStyle');});
+    } else if (document.getElementById(`${event.key}`).className == 'keyboard_key') {
+        TEXTAREA.value += `${document.getElementById(`${event.key}`).id}`;
+        document.getElementById(`${event.key}`).classList.add('key_pressed');
+    } 
+    
+    TEXTAREA.scrollTop = TEXTAREA.scrollHeight;
 })
 
 document.addEventListener('keyup', event => {
-    document.getElementById(`${event.key}`).style="";     /// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!_______________________@!!!*&^%$#
+    event.preventDefault();
+    if (event.code == 'Space') {     
+        SPACE_BAR.classList.remove('key_pressed');
+    } else if (event.code == 'ShiftLeft') {              
+        document.getElementById('ShiftLeft').classList.remove('key_pressed');
+    } else if (event.code == 'ControlLeft') {              
+        document.getElementById('ControlLeft').classList.remove('key_pressed');
+    } else if (event.code == 'AltLeft') {              
+        document.getElementById('AltLeft').classList.remove('key_pressed');
+    } else if (event.code == 'MetaLeft') {              
+        document.getElementById('MetaLeft').classList.remove('key_pressed');
+    } else if (event.code == 'ShiftRight') {              
+        document.getElementById('ShiftRight').classList.remove('key_pressed');
+    } else if (event.code == 'ControlRight') {              
+        document.getElementById('ControlRight').classList.remove('key_pressed');
+    } else if (event.code == 'AltRight') {              
+        document.getElementById('AltRight').classList.remove('key_pressed');
+    } else if (event.code == 'MetaRight') {              
+        document.getElementById('MetaRight').classList.remove('key_pressed');
+    } else if (event.code == 'Tab') {
+        document.getElementById('Tab').classList.remove('key_pressed');
+    } else if (event.code == 'Enter') {
+        document.getElementById('Enter').classList.remove('key_pressed');
+    } else if (event.code == 'ArrowLeft') {
+        document.getElementById('ArrowLeft').classList.remove('key_pressed');
+    } else if (event.code == 'ArrowDown') {
+        document.getElementById('ArrowDown').classList.remove('key_pressed');
+    } else if (event.code == 'ArrowRight') {
+        document.getElementById('ArrowRight').classList.remove('key_pressed');
+    } else if (event.code == 'ArrowUp') {
+        document.getElementById('ArrowUp').classList.remove('key_pressed');
+    } else if (event.code == 'Backspace') {
+        document.getElementById('Backspace').classList.remove('key_pressed');
+    } else if (event.code == 'CapsLock') {             
+        document.querySelectorAll('.keyboard_key').forEach(item => {item.classList.remove('capsStyle');});
+    } else { 
+        document.getElementById(`${event.key}`).classList.remove('key_pressed'); 
+    };
+
 })
+
+
 
 document.querySelectorAll('.keyboard_key').forEach(item => {
     item.addEventListener('click', event => {
-        TEXTAREA.value += `${item.id}`;
+        let inputSymbol = `${item.id}`
+        if (item.classList.contains('capsStyle')) {
+            TEXTAREA.value += inputSymbol.toUpperCase();
+        } else TEXTAREA.value += inputSymbol;
     })
 })
 
@@ -823,6 +896,7 @@ document.getElementById('Tab').addEventListener('click', event => {
 
 document.getElementById('Enter').addEventListener('click', event => {
     TEXTAREA.value += `\n`;
+    TEXTAREA.scrollTop = TEXTAREA.scrollHeight;
 })
 
 document.getElementById('ArrowLeft').addEventListener('click', event => {
@@ -841,29 +915,19 @@ document.getElementById('ArrowUp').addEventListener('click', event => {
     TEXTAREA.value += `↑`;
 })
 
-document.getElementById('Space').addEventListener('click', event => {
+SPACE_BAR.addEventListener('click', event => {
     TEXTAREA.value += ` `;
 })
 
 
+function capsListener() {
+    CAPS_BUTTON.classList.add('key_pressed');
+    document.querySelectorAll('.keyboard_key').forEach(item => {item.classList.add('capsStyle');});
+    CAPS_BUTTON.addEventListener('click', event => {
+        CAPS_BUTTON.classList.remove('key_pressed');
+        document.querySelectorAll('.keyboard_key').forEach(item => {item.classList.remove('capsStyle');});
+    })
+}
 
-/*
-document.getElementById('CapsLock').addEventListener('keydown', event => {
-    document.querySelectorAll('.keyboard_key').classList.add('capsStyle');
-})
-document.getElementById('CapsLock').addEventListener('keyup', event => {
-    document.querySelectorAll('.keyboard_key').classList.remove('capsStyle');
-})
-*/
+CAPS_BUTTON.addEventListener('click', capsListener);
 
-//.style="background-color: darkcyan;";
-//.style="";
-/*
-
-document.addEventListener('keydown', function(event) {
-    if (event.code == 'KeyZ' && (event.ctrlKey || event.metaKey)) {
-      alert('Отменить!')
-    }
-  });
-
-*/
