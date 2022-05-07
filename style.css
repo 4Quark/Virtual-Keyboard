@@ -69,6 +69,8 @@
 
 .keyboard_key:active {
     background-color:darkcyan;
+    border-radius: 8px;
+    transition-duration: 100ms;
 }
 
 .strong_key {
@@ -95,10 +97,14 @@
 
 .strong_key:active {
     background-color:darkcyan;
+    border-radius: 8px;
+    transition-duration: 100ms;
 }
 
 .key_pressed {
     background-color:darkcyan;
+    border-radius: 8px;
+    transition-duration: 100ms;
 }
 
 .capsStyle {
