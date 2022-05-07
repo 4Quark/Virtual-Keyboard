@@ -779,64 +779,6 @@ document.getElementById('ArrowDown').className = 'strong_key arrow_btn';
 document.getElementById('ArrowRight').className = 'strong_key arrow_btn';
 document.getElementById('ArrowUp').className = 'strong_key arrow_up_btn';
 
-/*
-document.addEventListener('keydown', event => {
-	event.preventDefault();
-	if (event.code == 'Space') {              
-		TEXTAREA.value += ' ';
-		SPACE_BAR.classList.add('key_pressed');
-	} else if (event.code == 'ShiftLeft') {              
-		document.getElementById('ShiftLeft').classList.add('key_pressed');
-		document.querySelectorAll('.keyboard_key').forEach(item => {item.classList.add('capsStyle');});
-	} else if (event.code == 'ControlLeft') {              
-		document.getElementById('ControlLeft').classList.add('key_pressed');
-	} else if (event.code == 'AltLeft') {              
-		document.getElementById('AltLeft').classList.add('key_pressed');
-	} else if (event.code == 'MetaLeft') {              
-		document.getElementById('MetaLeft').classList.add('key_pressed');
-	} else if (event.code == 'ShiftRight') {              
-		document.getElementById('ShiftRight').classList.add('key_pressed');
-		document.querySelectorAll('.keyboard_key').forEach(item => {item.classList.add('capsStyle');});
-	} else if (event.code == 'ControlRight') {              
-		document.getElementById('ControlRight').classList.add('key_pressed');
-	} else if (event.code == 'AltRight') {              
-		document.getElementById('AltRight').classList.add('key_pressed');
-	} else if (event.code == 'MetaRight') {              
-		document.getElementById('MetaRight').classList.add('key_pressed');
-	} else if (event.code == 'Tab') {
-		TEXTAREA.value += '\t';
-		document.getElementById('Tab').classList.add('key_pressed');
-	} else if (event.code == 'Enter') {
-		TEXTAREA.value += '\n';
-		document.getElementById('Enter').classList.add('key_pressed');
-	} else if (event.code == 'ArrowLeft') {
-		TEXTAREA.value += '←';
-		document.getElementById('ArrowLeft').classList.add('key_pressed');
-	} else if (event.code == 'ArrowDown') {
-		TEXTAREA.value += '↓';
-		document.getElementById('ArrowDown').classList.add('key_pressed');
-	} else if (event.code == 'ArrowRight') {
-		TEXTAREA.value += '→';
-		document.getElementById('ArrowRight').classList.add('key_pressed');
-	} else if (event.code == 'ArrowUp') {
-		TEXTAREA.value += '↑';
-		document.getElementById('ArrowUp').classList.add('key_pressed');
-	} else if (event.code == 'Backspace') {
-		let currentText = TEXTAREA.value;
-		currentText = currentText.slice(0,-1);
-		TEXTAREA.value = currentText;
-		document.getElementById('Backspace').classList.add('key_pressed');
-	} else if (event.code == 'CapsLock') {             
-		document.querySelectorAll('.keyboard_key').forEach(item => {item.classList.add('capsStyle');});
-		CAPS_BUTTON.classList.add('key_pressed');
-	} else if (document.getElementById(`${event.key}`).classList.contains('keyboard_key')) {
-		TEXTAREA.value += `${document.getElementById(`${event.key}`).id}`;
-		document.getElementById(`${event.key}`).classList.add('key_pressed');
-	} 
-    
-	TEXTAREA.scrollTop = TEXTAREA.scrollHeight;
-});
-*/
 
 function keydownListener(event) {
 	event.preventDefault();
@@ -918,7 +860,11 @@ function keydownListener(event) {
 		let inputSymbol = `${document.getElementById(`${event.key.toLowerCase()}`).id}`;
 		if (document.getElementById(`${event.key.toLowerCase()}`).classList.contains('capsStyle')) {
 			TEXTAREA.value += inputSymbol.toUpperCase();
-		} else TEXTAREA.value += inputSymbol;
+			document.getElementById(`${event.key.toLowerCase()}`).classList.add('key_pressed');
+		} else {
+			TEXTAREA.value += inputSymbol;
+			document.getElementById(`${event.key.toLowerCase()}`).classList.add('key_pressed');
+		}
 	} 
         
 	TEXTAREA.scrollTop = TEXTAREA.scrollHeight;
