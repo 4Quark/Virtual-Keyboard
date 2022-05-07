@@ -823,7 +823,7 @@ document.addEventListener('keydown', event => {
         document.getElementById('Backspace').classList.add('key_pressed');
     } else if (event.code == 'CapsLock') {             
         document.querySelectorAll('.keyboard_key').forEach(item => {item.classList.add('capsStyle');});
-    } else if (document.getElementById(`${event.key}`).className == 'keyboard_key') {
+    } else if (document.getElementById(`${event.key}`).classList.contains('keyboard_key')) {
         TEXTAREA.value += `${document.getElementById(`${event.key}`).id}`;
         document.getElementById(`${event.key}`).classList.add('key_pressed');
     } 
