@@ -856,6 +856,45 @@ function keydownListener(event) {
 	} else if (event.key == '~') {    
 		TEXTAREA.value += '`';      
 		document.getElementById('`').classList.add('key_pressed');
+	} else if (event.key == '±') {    
+		TEXTAREA.value += '§';      
+		document.getElementById('§').classList.add('key_pressed');
+	} else if (event.key == '!') {    
+		TEXTAREA.value += '1';      
+		document.getElementById('1').classList.add('key_pressed');
+	} else if (event.key == '@') {    
+		TEXTAREA.value += '2';      
+		document.getElementById('2').classList.add('key_pressed');
+	} else if (event.key == '#') {    
+		TEXTAREA.value += '3';      
+		document.getElementById('3').classList.add('key_pressed');
+	} else if (event.key == '$') {    
+		TEXTAREA.value += '4';      
+		document.getElementById('4').classList.add('key_pressed');
+	} else if (event.key == '%') {    
+		TEXTAREA.value += '5';      
+		document.getElementById('5').classList.add('key_pressed');
+	} else if (event.key == '^') {    
+		TEXTAREA.value += '6';      
+		document.getElementById('6').classList.add('key_pressed');
+	} else if (event.key == '&') {    
+		TEXTAREA.value += '7';      
+		document.getElementById('7').classList.add('key_pressed');
+	} else if (event.key == '*') {    
+		TEXTAREA.value += '8';      
+		document.getElementById('8').classList.add('key_pressed');
+	} else if (event.key == '(') {    
+		TEXTAREA.value += '9';      
+		document.getElementById('9').classList.add('key_pressed');
+	} else if (event.key == ')') {    
+		TEXTAREA.value += '0';      
+		document.getElementById('0').classList.add('key_pressed');
+	} else if (event.key == '+') {    
+		TEXTAREA.value += '=';      
+		document.getElementById('=').classList.add('key_pressed');
+	} else if (event.key == '_') {    
+		TEXTAREA.value += '-';      
+		document.getElementById('-').classList.add('key_pressed');
 	} else if (document.getElementById(`${event.key.toLowerCase()}`).classList.contains('keyboard_key')) {
 		let inputSymbol = `${document.getElementById(`${event.key.toLowerCase()}`).id}`;
 		if (document.getElementById(`${event.key.toLowerCase()}`).classList.contains('capsStyle')) {
@@ -929,6 +968,32 @@ document.addEventListener('keyup', event => {
 		document.getElementById('/').classList.remove('key_pressed');
 	} else if (event.key == '~') {    
 		document.getElementById('`').classList.remove('key_pressed');
+	} else if (event.key == '±') {      
+		document.getElementById('§').classList.remove('key_pressed');
+	} else if (event.key == '!') {  
+		document.getElementById('1').classList.remove('key_pressed');
+	} else if (event.key == '@') {    
+		document.getElementById('2').classList.remove('key_pressed');
+	} else if (event.key == '#') {    
+		document.getElementById('3').classList.remove('key_pressed');
+	} else if (event.key == '$') {    
+		document.getElementById('4').classList.remove('key_pressed');
+	} else if (event.key == '%') {     
+		document.getElementById('5').classList.remove('key_pressed');
+	} else if (event.key == '^') {    
+		document.getElementById('6').classList.remove('key_pressed');
+	} else if (event.key == '&') {    
+		document.getElementById('7').classList.remove('key_pressed');
+	} else if (event.key == '*') {   
+		document.getElementById('8').classList.remove('key_pressed');
+	} else if (event.key == '(') {   
+		document.getElementById('9').classList.remove('key_pressed');
+	} else if (event.key == ')') {      
+		document.getElementById('0').classList.remove('key_pressed');
+	} else if (event.key == '+') {     
+		document.getElementById('=').classList.remove('key_pressed');
+	} else if (event.key == '_') {     
+		document.getElementById('-').classList.remove('key_pressed');
 	} else { 
 		document.getElementById(`${event.key.toLowerCase()}`).classList.remove('key_pressed'); 
 	}
