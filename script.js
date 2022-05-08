@@ -997,7 +997,6 @@ document.addEventListener('keyup', event => {
 	} else { 
 		document.getElementById(`${event.key.toLowerCase()}`).classList.remove('key_pressed'); 
 	}
-
 });
 
 document.querySelectorAll('.keyboard_key').forEach(item => {
